@@ -1,0 +1,41 @@
+.flex-wrapper {
+  display: flex;
+  gap: 60px;
+
+  .filters-wrapper {
+    .filter {
+      width: 300px;
+      margin-bottom: 16px;
+
+      .filter-types-container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .filter-price-container {
+        display: flex;
+        gap: 16px;
+        width: 100%;
+        padding-top: 8px;
+      }
+
+    }
+  }
+
+  .product-list-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+
+    .product-card-image {
+      height: 260px;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+
+

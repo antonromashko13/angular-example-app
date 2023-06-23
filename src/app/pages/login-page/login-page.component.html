@@ -1,0 +1,9 @@
+<app-login-register-form
+        class="login-form-wrapper" formTitle="Login"
+        (onLoginOrRegistration)="login($event)"
+        [serverErrorMessage]="loginError"
+        [questionText]="'Not registered?'"
+        [link]="'/registration'"
+        [linkText]="'Registration'"
+>
+</app-login-register-form>

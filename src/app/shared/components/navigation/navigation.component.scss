@@ -1,0 +1,27 @@
+.navigation-wrapper{
+  background-color: #BF8DD6;
+  height: 100px;
+
+  .flex-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .home-link {
+      font-size: 28px;
+      color: white;
+    }
+
+    .auth-container {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      gap: 16px;
+
+      .color-white {
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Ring",
+      "imageUrl": "https://images.unsplash.com/photo-1589674781759-c21c37956a44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "description": "This ring is made up of 10mm rose-cut precious metal and is designed to be worn on the pinky finger.",
+      "price": 200,
+      "typeId": 1
+    },
+    {
+      "id": 2,
+      "name": "Necklace",
+      "imageUrl": "https://images.unsplash.com/photo-1589128777073-263566ae5e4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "description": "Get your piece of mind with this sterling silver pendant necklace.",
+      "price": 100,
+      "typeId": 1
+    },
+    {
+      "id": 3,
+      "name": "Pants",
+      "imageUrl": "https://images.unsplash.com/photo-1555689502-c4b22d76c56f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "description": "A great pair of pants will last you a lifetime.",
+      "price": 30,
+      "typeId": 2
+    },
+    {
+      "id": 4,
+      "name": "Skirt",
+      "imageUrl": "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=864&q=80",
+      "description": "A stylish skirt in a variety of designs and colours.",
+      "price": 50,
+      "typeId": 2
+    },
+    {
+      "id": 5,
+      "name": "Top",
+      "imageUrl": "https://images.unsplash.com/photo-1608984361471-ff566593088f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1274&q=80",
+      "description": "A practical and stylish top that looks great on everyone.",
+      "price": 20,
+      "typeId": 2
+    }
+  ],
+  "types": [
+    {
+      "id": 1,
+      "name": "Jewelry"
+    },
+    {
+      "id": 2,
+      "name": "Clothes"
+    },
+    {
+      "id": 3,
+      "name": "Food"
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$spvS9Ac7BPXH/l14j8jMJ.dxD2iB8151tVZDDIQfAcbw4gKqRIvBm",
+      "productsId": [
+        3,
+        5
+      ],
+      "id": 2
+    },
+    {
+      "email": "nick@mail.com",
+      "password": "$2a$10$kl6FnqL98TW.ECRpQUdiS.6yn28wys/5kZ0HbXdhg/bXWsOA8Yg7u",
+      "productsId": [
+        1,
+        1,
+        2
+      ],
+      "id": 3
+    },
+    {
+      "email": "admin@mail.ru",
+      "password": "$2a$10$wp7rwLMZqc2kuPtAqLyniebA9Lf5UvhJQ1QE12lF33vBjr3dR7qZO",
+      "goods": [],
+      "id": 4
+    }
+  ]
+}

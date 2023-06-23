@@ -1,0 +1,16 @@
+<ul class="cart-items-container" *ngIf="cart.length; else emptyCartBlock">
+    <mat-card class="cart-item" *ngFor="let cartItem of cart">
+        <a class="cart-product" [routerLink]="[{ outlets: { sidebar: ['product-info', cartItem.product.id]}}]">
+            <div class="cart-item-image" [ngStyle]="{'background-image': 'url(' + cartItem.product.imageUrl+ ')'}"></div>
+            <div>
+                <p>{{ cartItem.product.name }}</p>
+                <p>{{ cartItem.product.price | currency }}</p>
+            </div>
+        </a>
+        <div class="amount">{{ cartItem.amount }}</div>
+    </mat-card>
+</ul>
+
+<ng-template #emptyCartBlock>
+    Cart is empty
+</ng-template>

@@ -1,0 +1,31 @@
+.cart-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .cart-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .cart-product {
+      display: flex;
+      gap: 16px;
+      width: 100%;
+
+      .cart-item-image {
+        height: 160px;
+        width: 160px;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+    .amount {
+      width: 160px;
+      text-align: center;
+    }
+
+  }
+}

@@ -1,0 +1,45 @@
+<div class="flex-wrapper">
+    <div class="filters-wrapper">
+        <mat-card class="filter">
+            <mat-card-content>
+                <mat-card-title>Types</mat-card-title>
+                <mat-radio-group class="filter-types-container" *ngFor="let type of productTypes"  [(ngModel)]="typeId"  (change)="filtersFormChanged()">
+                    <mat-radio-button type="radio" [value]="type.id">{{type.name}}</mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="filter">
+            <mat-card-content>
+                <mat-card-title>Price $</mat-card-title>
+                <div class="filter-price-container">
+                    <mat-form-field>
+                        <mat-label>From</mat-label>
+                        <input type="number" matInput [(ngModel)]="minPrice" (input)="filtersFormChanged()">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>To</mat-label>
+                        <input type="number" matInput [(ngModel)]="maxPrice" (input)="filtersFormChanged()"/>
+                    </mat-form-field>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <ul class="product-list-container" *ngIf="productList.length; else emptyProductListBlock">
+        <li *ngFor="let product of productList" >
+            <a [routerLink]="[{ outlets: { sidebar: ['product-info', product.id]}}]">
+                <mat-card class="product-card">
+                    <div class="product-card-image" [ngStyle]="{'background-image': 'url(' + product.imageUrl+ ')'}"></div>
+                    <mat-card-content>
+                        <p>{{ product.name }}</p>
+                        <p>{{ product.price | currency }}</p>
+                    </mat-card-content>
+                </mat-card>
+            </a>
+        </li>
+    </ul>
+
+    <ng-template #emptyProductListBlock>
+        No products
+    </ng-template>
+</div>

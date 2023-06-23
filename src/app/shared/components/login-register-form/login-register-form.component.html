@@ -1,0 +1,24 @@
+<form class="login-register-form-container" [formGroup]="form" #formDirective="ngForm" (ngSubmit)="submit()">
+    <h2>{{ formTitle }}</h2>
+
+    <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput placeholder="username">
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input formControlName="password" matInput placeholder="password" type="password">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" [disabled]="!form.valid" type="submit">
+        OK
+    </button>
+
+    <mat-error *ngIf="serverErrorMessage">{{ serverErrorMessage }}</mat-error>
+
+    <p>
+        {{questionText}}
+        <a [routerLink]="link">{{linkText}}</a>
+    </p>
+</form>

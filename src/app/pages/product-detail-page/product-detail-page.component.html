@@ -1,0 +1,10 @@
+<div class="product-detail-wrapper" *ngIf="product">
+    <a mat-icon-button class="product-info" [routerLink]="[{outlets: {sidebar: ['', null]}}]">
+        <mat-icon>close</mat-icon>
+    </a>
+    <div class="product-image" [ngStyle]="{'background-image': 'url(' + product.imageUrl+ ')'}"></div>
+    <div class="product-name">{{product.name}}</div>
+    <div class="product-price">{{product.price | currency}}</div>
+    <button class="add-product-to-cart-button" *ngIf="isLogged" mat-raised-button color="primary" (click)="addProductToCart(product.id)">Add product to shopping cart</button>
+    <div class="product-description">{{product.description}}</div>
+</div>
